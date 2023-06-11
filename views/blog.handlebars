@@ -1,0 +1,52 @@
+
+<div class = "card main-card" id={{blogs.id}}>
+    <div>
+        <h2>{{blogs.title}}</h2>
+        <h3>By {{blogs.user.username}} on {{blogs.date}}</h3>
+    </div>
+    <div>
+        <p>{{blogs.content}}</p>
+    </div>
+</div>
+
+
+
+<div class = "card">
+    <div>
+        <h3>Comments</h3>
+        {{#each blogs.comments}}
+        <div class = "card">
+            <div>{{this.content}}</div>
+            <div>-{{this.user.username}}</div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+{{#if logged_in}}
+<div class = "card">
+    <div>
+        <div class="spacing new-post-card">
+        <h4 class="page-title">New Comment</h4>
+        <form class="form new-post-form" id = "new-comment-form">
+        {{!-- <div class="groupInput">
+            <label for="post-id">Comment Title:</label>
+            <input class="inputBox" type="text" id="post-id" name = "post-id" />
+        </div> --}}
+        <div class="groupInput">
+            <label for="comment-body">Enter Comment Here:</label>
+            <input class="inputBox" type="textarea" id="comment-body" name="comment-body" />
+        </div>
+        <div class="groupInput">
+            <label for="comment-date">Date:</label>
+            <input class="inputBox" type="date" id="comment-date" name="comment-date" />
+        </div>
+        <div class="groupInput">
+            <button class="btn btn-cream" type="submit">Post Comment</button>
+        </div>
+        </form>
+  </div>
+    </div>
+</div>
+{{/if}}
+<script src="/js/comment.js"></script>

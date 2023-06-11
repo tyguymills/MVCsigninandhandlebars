@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  </nav>
+  <header class="hero spacing">
+    <h1 class=" title">Please Keep Your Blogs Respectful Of This Platform</a></h1>
+    <h3 class="title">No Jeering at others code, cyberbullying, etc. Be A Good Person</h3>
+  </header>
+
+  <main class="col-auto">
+    
+    {{#if blogs.length}}
+      {{#each blogs}}
+        <div class = "card">
+        <div>
+            <h2>{{title}}</h2>
+            <h3>By {{user.username}} on {{date}}</h3>
+        </div>
+        <div>
+            <p>{{content}}</p>
+        </div>
+        <div>
+            <a href = "/blog/{{id}}" class = "card-link">Post Details</a>
+        </div>
+        <div>
+            <button class = "btn btn-danger" id = "delete-btn">Delete Post</button>
+        </div>
+        <div>
+            <a class = "btn btn-danger" href = '/dashboard/edit'>Edit Post</a>
+        </div>
+        </div>
+      {{/each}}
+    {{/if}}
+  </main>
+
+  <footer class="footer flex-row justify-center">
+    <a href="/dashboard/new">➕ New Post</a>
+  </footer>
+</body>
+
+<script src="/js/logout.js"></script>
+<script src="/js/edit.js"></script>
+
+</html>

@@ -1,0 +1,16 @@
+<div class = "card">
+    <h2>{{blog.title}}</h2>
+    <h3>By {{blog.user.username}} on {{blog.date}}</h3>
+</div>
+<div>
+    <p>{{blog.content}}</p>
+</div>
+
+{{#each comments}}
+    <div>
+        <h6>{{user.username}} at {{date}}</h6>
+    </div>
+    <div>
+        <p>{{content}}</p>
+    </div>
+{{/each}}
