@@ -1,5 +1,5 @@
-const postId = document.querySelector('input[name="post-id"]').value;
-
+// const postId = document.querySelector('input[name="post-id"]').value;
+const postId = 5;
 const editFormHandler = async function(event) {
   event.preventDefault();
 
@@ -26,7 +26,9 @@ const editFormHandler = async function(event) {
   }
 };
 
-const deleteClickHandler = async function() {
+const deleteClickHandler = async function(event) {
+  event.preventDefault();
+  console.log("THIS SHOULD WORK")
   try {
     await fetch(`/api/blog/${postId}`, {
       method: 'DELETE'
@@ -38,5 +40,5 @@ const deleteClickHandler = async function() {
   }
 };
 
-document.querySelector('#edit-blog-form').addEventListener('submit', editFormHandler);
+// document.querySelector('#edit-blog-form').addEventListener('submit', editFormHandler);
 document.querySelector('#delete-btn').addEventListener('click', deleteClickHandler);
