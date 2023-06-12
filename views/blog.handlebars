@@ -1,7 +1,7 @@
 
 <div class = "card main-card" id={{blogs.id}}>
     <div>
-        <h2>{{blogs.title}}</h2>
+        <h2>{{blogs.logo}}</h2>
         <h3>By {{blogs.user.username}} on {{blogs.date}}</h3>
     </div>
     <div>
@@ -26,23 +26,19 @@
 {{#if logged_in}}
 <div class = "card">
     <div>
-        <div class="spacing new-post-card">
-        <h4 class="page-title">New Comment</h4>
+        <div class="spacing">
+        <h4 class="">New Comment</h4>
         <form class="form new-post-form" id = "new-comment-form">
-        {{!-- <div class="groupInput">
-            <label for="post-id">Comment Title:</label>
-            <input class="inputBox" type="text" id="post-id" name = "post-id" />
-        </div> --}}
         <div class="groupInput">
-            <label for="comment-body">Enter Comment Here:</label>
-            <input class="inputBox" type="textarea" id="comment-body" name="comment-body" />
+            <label for="body">Enter Comment Here:</label>
+            <input class="inputBox" type="textarea" id="body" name="body" />
         </div>
         <div class="groupInput">
             <label for="comment-date">Date:</label>
             <input class="inputBox" type="date" id="comment-date" name="comment-date" />
         </div>
         <div class="groupInput">
-            <button class="btn btn-cream" type="submit">Post Comment</button>
+            <button class="btn pearlBtn" type="submit">Post Comment</button>
         </div>
         </form>
   </div>

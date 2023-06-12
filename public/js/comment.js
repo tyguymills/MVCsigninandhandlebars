@@ -1,7 +1,7 @@
 const commentFormHandler = async (event) => {
   event.preventDefault();
 
-  const content = document.getElementById('comment-body').value;
+  const content = document.getElementById('body').value;
   const date = document.getElementById('comment-date').value;
   const blog_id = document.querySelector('.main-card').id;
 
