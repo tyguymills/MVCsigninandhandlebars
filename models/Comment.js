@@ -12,6 +12,7 @@ Comment.init(
         allowNull: false,
         creamKey: true,
         autoIncrement: true,
+        primaryKey:true
       },
       content: {
         type: DataTypes.STRING,
